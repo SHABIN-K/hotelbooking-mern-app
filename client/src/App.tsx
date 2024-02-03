@@ -4,7 +4,22 @@ import Layout from "./layouts/Layout";
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Layout />} />
+      <Route
+        path="/"
+        element={
+          <Layout>
+            <p>helo</p>
+          </Layout>
+        }
+      />
+      <Route
+        path="/search"
+        element={
+          <Layout>
+            <p>helo</p>
+          </Layout>
+        }
+      />
     </Routes>
   );
 }
