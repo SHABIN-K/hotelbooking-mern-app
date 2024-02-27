@@ -1,3 +1,4 @@
+import bcrypt from "bcryptjs";
 import mongoose from "mongoose";
 import { UserType } from "../../shared/types";
 
@@ -8,4 +9,13 @@ const userSchema = new mongoose.Schema({
   lastName: { type: String, required: true },
 });
 
-const user = mongoose.model<UserType>("user", userSchema);
+userSchema.pre("save", async function (next) {
+  if (this.isModified("password")) {
+    this.password = await bcrypt.hash(this.password, 8);
+  }
+  next();
+});
+
+const User = mongoose.model<UserType>("user", userSchema);
+
+export default User;

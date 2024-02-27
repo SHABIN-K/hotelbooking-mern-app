@@ -1,16 +1,17 @@
 import "dotenv/config";
 import cors from "cors";
-import express, { Request, Response } from "express";
+import express from "express";
 import connectDB from "./database/connect";
+import userRoutes from "./routes/users";
+import authRoutes from "./routes/auth";
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 
-app.get("/api/test", async (req: Request, res: Response) => {
-  res.json({ message: "Hello from express endpoint!" });
-});
+app.use("/api/auth", authRoutes);
+app.use("/api/users", userRoutes);
 
 const startServer = async () => {
   const port = process.env.PORT || 5000;
