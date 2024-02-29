@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import { useMutation } from "react-query";
 import * as apiClient from "../api-client";
+import { useAppContext } from "../contexts/AppContext";
 
 export type Inputs = {
   firstName: string;
@@ -11,6 +12,7 @@ export type Inputs = {
 };
 
 const Register = () => {
+  const { showToast } = useAppContext();
   const {
     register,
     watch,
