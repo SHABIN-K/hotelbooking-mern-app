@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
-import { useMutation, useQueryClient } from "react-query";
-import { Link, useLocation, useNavigate } from "react-router-dom";
 import * as apiClient from "../api-client";
+import { useMutation, useQueryClient } from "react-query";
+import { Link, useNavigate } from "react-router-dom";
 import { useAppContext } from "../contexts/AppContext";
 
 export type SignInFormData = {
@@ -14,7 +14,7 @@ const SignIn = () => {
   const navigate = useNavigate();
   const queryClient = useQueryClient();
 
-  const location = useLocation();
+  //const location = useLocation();
   const {
     register,
     formState: { errors },

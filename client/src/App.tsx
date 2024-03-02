@@ -1,10 +1,8 @@
-import { lazy } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Layout from "./layouts/Layout";
+import SignIn from "./pages/SignIn";
+import Register from "./pages/Register";
 
-
-const SignIn = lazy(() => import("./pages/SignIn"));
-const Register = lazy(() => import("./pages/Register"));
 
 function App() {
   return (
