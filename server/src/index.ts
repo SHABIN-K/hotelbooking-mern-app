@@ -2,12 +2,13 @@ import "dotenv/config";
 import cors from "cors";
 import express from "express";
 import cookieParser from "cookie-parser";
-import {v2 as cloudinary} from 'cloudinary';
+import { v2 as cloudinary } from "cloudinary";
 
 import connectDB from "./database/connect";
 import userRoutes from "./routes/users";
 import authRoutes from "./routes/auth";
-          
+import myHotelRoutes from "./routes/my-hotel";
+
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
   api_key: process.env.CLOUDINARY_API_KEY,
@@ -27,6 +28,7 @@ app.use(
 
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
+app.use("/api/my-hotels", myHotelRoutes);
 
 const startServer = async () => {
   const port = process.env.PORT || 5000;
