@@ -8,6 +8,7 @@ import connectDB from "./database/connect";
 import userRoutes from "./routes/users";
 import authRoutes from "./routes/auth";
 import myHotelRoutes from "./routes/my-hotel";
+import hotelRoutes from "./routes/hotels";
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -29,6 +30,7 @@ app.use(
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/my-hotels", myHotelRoutes);
+app.use("/api/hotels", hotelRoutes);
 
 const startServer = async () => {
   const port = process.env.PORT || 5000;
