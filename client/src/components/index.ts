@@ -4,6 +4,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import Hero from "./Hero";
 import HotelTypesFilter from "./HotelTypesFilter";
+import LatestDestinationCard from "./LatestDestinationCard";
 import Pagination from "./Pagination";
 import PriceFilter from "./PriceFilter";
 import SearchBar from "./SearchBar";
@@ -22,4 +23,5 @@ export {
   FacilitiesFilter,
   PriceFilter,
   BookingDetailsSummary,
+  LatestDestinationCard,
 };
