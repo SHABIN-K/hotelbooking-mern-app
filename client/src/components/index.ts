@@ -1,3 +1,4 @@
+import BookingDetailsSummary from "./BookingDetailsSummary";
 import FacilitiesFilter from "./FacilitiesFilter";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -20,4 +21,5 @@ export {
   HotelTypesFilter,
   FacilitiesFilter,
   PriceFilter,
+  BookingDetailsSummary,
 };
