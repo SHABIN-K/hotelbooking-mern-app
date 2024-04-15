@@ -2,7 +2,7 @@ import { useQuery } from "react-query";
 import * as apiClient from "../api-client";
 import { useSearchContext } from "../contexts/SearchContext";
 import { useState } from "react";
-import { Pagination, SearchResultsCard } from "../components";
+import { Pagination, SearchResultsCard, StarRatingFilter } from "../components";
 
 const Search = () => {
   const search = useSearchContext();
@@ -70,6 +70,10 @@ const Search = () => {
           <h3 className="text-lg font-semibold border-b border-slate-300 pb-5">
             Filter by:
           </h3>
+          <StarRatingFilter
+            selectedStars={selectedStars}
+            onChange={handleStarsChange}
+          />
         </div>
       </div>
       <div className="flex flex-col gap-5">
