@@ -4,23 +4,15 @@ This project is a Hotel booking application built using Node.js, MongoDb, Cloudi
 
 ## Features 🌟
 
+- **Post operations on hotels** Functionality for users to perform CRUD (Create, Read, Update, Delete) operations on hotel entries.
 - **Tailwind Design:** Stylish UI with Tailwind CSS.
-- **Animations and Effects:** Enhance user experience with dynamic elements.
 - **Full Responsiveness:** Optimal viewing on various devices.
-- **Clerk Authentication:** Seamless user authentication with email, Google, and 9+ social logins.
 - **Form Handling:** Client-side validation using react-hook-form and server error handling with react-toast.
-- **Image Generation:** Tool powered by Open AI.
-- **Video Generation:** Utilize Replicate AI for video content creation.
-- **Conversation Generation:** Open AI-powered tool for generating dynamic conversations.
-- **Music Generation:** Replicate AI for personalized music creation.
-- **Loading State:** Informative page loading states for a smoother user experience.
-- **Stripe Subscription:** Monthly subscription handling for financial transactions.
-- **Free Tier with API Limiting:** Provide a free tier with controlled API access.
+- **Payment integration:** Monthly subscription handling for financial transactions.
 - **RESTful Routes:** Implementation of POST, DELETE, and GET routes in route handlers (app/api).
 - **Database Access:** Fetch data in server react components directly from the database without using APIs (like Magic!).
 - **Component Relations:** Manage relations between server and child components efficiently.
 - **Layout Reusability:** Demonstrate how to reuse layouts for consistent design.
-- **Folder Structure:** Organized folder structure in Next.js 13 App Router for clarity and scalability.
 
 ## Tech Stack 🛠️
 
@@ -66,17 +58,30 @@ From your command line:
 
 # Go into the repository
   $cd hotelbooking-mern-app
-
-# Install dependencies
-  $npm install
-  # <Create .env appropriately>
-
-# This is needed if you are planning to run studydrive locally
-  $npx prisma db push
-
-# Start the app in development mode with hot-code reloading by running:
-  $npm run dev
 ```
+ Navigate to the `server` folder and create two files: `.env` and `.env.e2e`. Add the following contents to both files:
+
+    ```plaintext
+    MONGODB_CONNECTION_STRING=
+
+    JWT_SECRET_KEY=
+    FRONTEND_URL=
+
+    # Cloudinary Variables
+    CLOUDINARY_CLOUD_NAME=
+    CLOUDINARY_API_KEY=
+    CLOUDINARY_API_SECRET=
+
+    # Stripe
+    STRIPE_API_KEY=
+    ```
+
+ Navigate to the `client` folder and create a file: `.env`:
+
+    ```plaintext
+    VITE_API_BASE_URL=
+    VITE_STRIPE_PUB_KEY=
+    ```
 
 ## Support 💬
 
