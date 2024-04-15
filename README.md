@@ -31,23 +31,6 @@ This project is a Hotel booking application built using Node.js, MongoDb, Cloudi
 - [Git](https://git-scm.com/)
 - [npm](https://www.npmjs.com/)
 
-### Environment Variables ⚙️
-
-To run this project, you will need to add the following environment variables to your .env file:
-
-- `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY `:Your Clerk public key. This identifies your Clerk project to the client-side of your application.
-- `CLERK_SECRET_KEY` :Your Clerk secret key.This is used by the server-side of your application to talk securely with Clerk's API.
-- `NEXT_PUBLIC_CLERK_SIGN_IN_URL`: Path for user sign-in (`/sign-in`).
-- `NEXT_PUBLIC_CLERK_SIGN_UP_URL`: Path for user sign-up (`/sign-up`).
-- `NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL`: Redirect URL after user sign-in (`/dashboard`).
-- `NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL`: Redirect URL after user sign-up (`/dashboard`).
-- `OPENAI_API_KEY `: Your OpenAI API Key (for interacting with OpenAI services)
-- `REPLICATE_API_TOKEN`:Your Replicate API Token (for interacting with Replicate services)
-- `DATABASE_URL`: Your MongoDB connection URL.
-- `STRIPE_API_KEY`: Public key for your Stripe application.
-- `STRIPE_WEBHOOK_SECRET`: Your Stripe webhook secret.
-- `NEXT_PUBLIC_APP_URL`: Application URL, e.g., "http://localhost:3000".
-
 ### How To Use 🚀
 
 From your command line:
@@ -61,7 +44,7 @@ From your command line:
 ```
  Navigate to the `server` folder and create two files: `.env` and `.env.e2e`. Add the following contents to both files:
 
-    ```plaintext
+    ```
     MONGODB_CONNECTION_STRING=
 
     JWT_SECRET_KEY=
@@ -78,10 +61,22 @@ From your command line:
 
  Navigate to the `client` folder and create a file: `.env`:
 
-    ```plaintext
+    ```
     VITE_API_BASE_URL=
     VITE_STRIPE_PUB_KEY=
     ```
+## Running the Application
+
+1. **Backend**:
+    - Navigate to the `server` directory.
+    - Install dependencies: `npm install`.
+    - Start the server: `npm start`.
+
+2. **Frontend**:
+    - Open a new terminal and navigate to the `client` directory.
+    - Install dependencies: `npm install`.
+    - Start the frontend application: `npm run dev`.
+    - The application should now be running on `http://localhost:3000` but verify this in your command line terminal  
 
 ## Support 💬
 
