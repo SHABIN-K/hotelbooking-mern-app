@@ -2,7 +2,14 @@ import { useQuery } from "react-query";
 import * as apiClient from "../api-client";
 import { useSearchContext } from "../contexts/SearchContext";
 import { useState } from "react";
-import { Pagination, SearchResultsCard, StarRatingFilter } from "../components";
+import {
+  FacilitiesFilter,
+  HotelTypesFilter,
+  Pagination,
+  PriceFilter,
+  SearchResultsCard,
+  StarRatingFilter,
+} from "../components";
 
 const Search = () => {
   const search = useSearchContext();
@@ -73,6 +80,18 @@ const Search = () => {
           <StarRatingFilter
             selectedStars={selectedStars}
             onChange={handleStarsChange}
+          />
+          <HotelTypesFilter
+            selectedHotelTypes={selectedHotelTypes}
+            onChange={handleHotelTypeChange}
+          />
+          <FacilitiesFilter
+            selectedFacilities={selectedFacilities}
+            onChange={handleFacilityChange}
+          />
+          <PriceFilter
+            selectedPrice={selectedPrice}
+            onChange={(value?: number) => setSelectedPrice(value)}
           />
         </div>
       </div>
